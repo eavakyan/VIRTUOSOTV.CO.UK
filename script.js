@@ -122,31 +122,94 @@
             });
         }
 
-        // Contact Form
+        // Contact Form - API Integration
         if (contactForm) {
-            contactForm.addEventListener('submit', function(e) {
+            contactForm.addEventListener('submit', async function(e) {
                 e.preventDefault();
 
-                // Show success message (in production, this would send to a server)
-                showNotification('Thank you for your message! We\'ll get back to you soon.');
-                this.reset();
+                const submitBtn = this.querySelector('button[type="submit"]');
+                const originalBtnText = submitBtn.textContent;
+
+                // Get form data
+                const formData = {
+                    name: this.querySelector('#name').value.trim(),
+                    email: this.querySelector('#email').value.trim(),
+                    type: 'media',
+                    organization: 'VIRTUOSO TV Enquiry',
+                    message: `Subject: ${this.querySelector('#subject').value.trim()}\n\n${this.querySelector('#message').value.trim()}`
+                };
+
+                // Validate required fields
+                if (formData.name.length < 2) {
+                    showNotification('Please enter your name (at least 2 characters).', 'error');
+                    return;
+                }
+
+                if (!formData.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+                    showNotification('Please enter a valid email address.', 'error');
+                    return;
+                }
+
+                // Set loading state
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Sending...';
+                submitBtn.style.opacity = '0.7';
+                submitBtn.style.cursor = 'not-allowed';
+
+                try {
+                    const response = await fetch('https://contact-form-api.contact-195.workers.dev', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(formData)
+                    });
+
+                    const result = await response.json();
+
+                    if (response.ok && result.success) {
+                        showNotification('Thank you for your message! We\'ll get back to you soon.', 'success');
+                        contactForm.reset();
+                    } else {
+                        const errorMessage = result.error || 'Failed to send message. Please try again.';
+                        showNotification(errorMessage, 'error');
+                    }
+                } catch (error) {
+                    console.error('Contact form error:', error);
+                    showNotification('Network error. Please check your connection and try again.', 'error');
+                } finally {
+                    // Reset button state
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = originalBtnText;
+                    submitBtn.style.opacity = '';
+                    submitBtn.style.cursor = '';
+                }
             });
         }
     }
 
     // Notification System
-    function showNotification(message) {
+    function showNotification(message, type = 'success') {
         // Remove existing notification
         const existingNotification = document.querySelector('.notification');
         if (existingNotification) {
             existingNotification.remove();
         }
 
+        // Determine colors based on type
+        const borderColor = type === 'error' ? '#dc3545' : '#c9a961';
+        const iconColor = type === 'error' ? '#dc3545' : '#c9a961';
+        const icon = type === 'error'
+            ? '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>'
+            : '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>';
+
         // Create notification element
         const notification = document.createElement('div');
         notification.className = 'notification';
+        notification.setAttribute('role', 'alert');
         notification.innerHTML = `
-            <p>${message}</p>
+            <span class="notification-icon" style="color: ${iconColor}; flex-shrink: 0;">${icon}</span>
+            <p style="margin: 0; flex: 1;">${message}</p>
             <button class="notification-close" aria-label="Close notification">&times;</button>
         `;
 
@@ -158,7 +221,7 @@
             max-width: 400px;
             padding: 1rem 1.5rem;
             background-color: #1a1a1a;
-            border: 1px solid #c9a961;
+            border: 1px solid ${borderColor};
             border-radius: 8px;
             color: #f5f5f5;
             font-size: 0.9375rem;
@@ -167,6 +230,7 @@
             display: flex;
             align-items: center;
             gap: 1rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
         `;
 
         const closeBtn = notification.querySelector('.notification-close');

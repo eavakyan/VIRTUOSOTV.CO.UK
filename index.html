@@ -5,6 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="VIRTUOSO TV - Your premier destination for classical music television. Experience world-class performances, exclusive interviews, and timeless masterpieces.">
     <title>VIRTUOSO TV | Classical Music Television</title>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://virtuosotv.co.uk/">
+    <meta property="og:title" content="VIRTUOSO TV | Classical Music Television">
+    <meta property="og:description" content="Your premier destination for classical music television. Experience world-class performances, exclusive interviews, and timeless masterpieces.">
+    <meta property="og:image" content="https://virtuosotv.co.uk/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://virtuosotv.co.uk/">
+    <meta name="twitter:title" content="VIRTUOSO TV | Classical Music Television">
+    <meta name="twitter:description" content="Your premier destination for classical music television. Experience world-class performances, exclusive interviews, and timeless masterpieces.">
+    <meta name="twitter:image" content="https://virtuosotv.co.uk/images/og-image.jpg">
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -14,15 +32,15 @@
     <header class="header" id="header">
         <div class="container">
             <a href="#" class="logo">
-                <span class="logo-text">VIRTUOSO</span>
-                <span class="logo-accent">TV</span>
+                <img src="images/logo.png" alt="VIRTUOSO TV" height="24">
             </a>
             <nav class="nav" id="nav">
                 <ul class="nav-list">
                     <li><a href="#home" class="nav-link">Home</a></li>
                     <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#schedule" class="nav-link">Schedule</a></li>
+                    <li><a href="#programming" class="nav-link">Programming</a></li>
                     <li><a href="#featured" class="nav-link">Featured</a></li>
+                    <li><a href="#team" class="nav-link">Team</a></li>
                     <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
             </nav>
@@ -44,7 +62,7 @@
                 </h1>
                 <p class="hero-subtitle">World-class performances, exclusive interviews, and timeless masterpieces — all in stunning high definition.</p>
                 <div class="hero-actions">
-                    <a href="#schedule" class="btn btn-primary">View Schedule</a>
+                    <a href="#programming" class="btn btn-primary">Programming</a>
                     <a href="#about" class="btn btn-secondary">Learn More</a>
                 </div>
             </div>
@@ -63,16 +81,16 @@
                 <div class="about-grid">
                     <div class="about-content">
                         <p class="about-lead">VIRTUOSO TV is the United Kingdom's premier classical music television channel, dedicated to celebrating and preserving the rich heritage of classical music.</p>
-                        <p>We broadcast 24 hours a day, featuring live performances from the world's most prestigious concert halls, intimate recitals, opera productions, ballet performances, and in-depth documentaries exploring the lives of great composers and musicians.</p>
+                        <p>We feature on-demand performances from the world's most prestigious concert halls, intimate recitals, opera productions, ballet performances, and in-depth documentaries exploring the lives of great composers and musicians.</p>
                         <p>Our mission is to make classical music accessible to everyone, from seasoned aficionados to curious newcomers discovering the genre for the first time.</p>
                     </div>
                     <div class="about-stats">
                         <div class="stat">
-                            <span class="stat-number">24/7</span>
-                            <span class="stat-label">Broadcasting</span>
+                            <span class="stat-number">GLOBAL</span>
+                            <span class="stat-label">Performances</span>
                         </div>
                         <div class="stat">
-                            <span class="stat-number">500+</span>
+                            <span class="stat-number">EXCLUSIVE</span>
                             <span class="stat-label">Performances Monthly</span>
                         </div>
                         <div class="stat">
@@ -84,58 +102,98 @@
             </div>
         </section>
 
-        <section class="schedule" id="schedule">
+        <section class="programming" id="programming">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Today's Schedule</h2>
-                    <p class="section-subtitle">Curated programming for your listening pleasure</p>
+                    <h2 class="section-title">Our Programming</h2>
+                    <p class="section-subtitle">Discover a world of classical music excellence</p>
                 </div>
-                <div class="schedule-grid">
-                    <article class="schedule-item">
-                        <time class="schedule-time">06:00</time>
-                        <div class="schedule-content">
-                            <h3 class="schedule-title">Morning Serenade</h3>
-                            <p class="schedule-desc">Begin your day with gentle chamber music selections from Mozart, Haydn, and Schubert.</p>
+                <div class="programming-grid">
+                    <article class="programming-card">
+                        <div class="programming-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 18.5a6.5 6.5 0 1 0 0-13 6.5 6.5 0 0 0 0 13Z"></path>
+                                <path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path>
+                                <path d="M19 12h2M3 12h2M12 5V3M12 21v-2"></path>
+                            </svg>
                         </div>
+                        <h3 class="programming-title">Exclusive Interviews</h3>
+                        <p class="programming-desc">Intimate conversations with legendary conductors, soloists, and rising stars of the classical world.</p>
                     </article>
-                    <article class="schedule-item">
-                        <time class="schedule-time">09:00</time>
-                        <div class="schedule-content">
-                            <h3 class="schedule-title">Piano Masters</h3>
-                            <p class="schedule-desc">Historic recordings featuring Horowitz, Rubinstein, and contemporary virtuosos.</p>
+                    <article class="programming-card">
+                        <div class="programming-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                                <path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v4M8 23h8"></path>
+                            </svg>
                         </div>
+                        <h3 class="programming-title">Podcasts</h3>
+                        <p class="programming-desc">Deep dives into music history, composer biographies, and behind-the-scenes stories from the concert hall.</p>
                     </article>
-                    <article class="schedule-item">
-                        <time class="schedule-time">12:00</time>
-                        <div class="schedule-content">
-                            <h3 class="schedule-title">Opera at Noon</h3>
-                            <p class="schedule-desc">Complete opera performance: Puccini's La Bohème from the Royal Opera House.</p>
+                    <article class="programming-card">
+                        <div class="programming-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4z"></path>
+                                <path d="M3 12c0-4.97 4.03-9 9-9s9 4.03 9 9-4.03 9-9 9-9-4.03-9-9z"></path>
+                                <path d="M12 2v2M12 20v2M2 12h2M20 12h2"></path>
+                            </svg>
                         </div>
+                        <h3 class="programming-title">Operas</h3>
+                        <p class="programming-desc">Complete productions from the world's most prestigious opera houses, from timeless classics to modern premieres.</p>
                     </article>
-                    <article class="schedule-item">
-                        <time class="schedule-time">15:00</time>
-                        <div class="schedule-content">
-                            <h3 class="schedule-title">Composer Portrait: Beethoven</h3>
-                            <p class="schedule-desc">Documentary exploring the life and works of Ludwig van Beethoven.</p>
+                    <article class="programming-card">
+                        <div class="programming-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M9 18V5l12-2v13"></path>
+                                <circle cx="6" cy="18" r="3"></circle>
+                                <circle cx="18" cy="16" r="3"></circle>
+                            </svg>
                         </div>
+                        <h3 class="programming-title">Chamber Orchestras</h3>
+                        <p class="programming-desc">Refined performances featuring intimate ensembles performing works by Mozart, Haydn, and contemporary composers.</p>
                     </article>
-                    <article class="schedule-item">
-                        <time class="schedule-time">18:00</time>
-                        <div class="schedule-content">
-                            <h3 class="schedule-title">Symphony Hour</h3>
-                            <p class="schedule-desc">Berlin Philharmonic performs Mahler's Symphony No. 5.</p>
+                    <article class="programming-card">
+                        <div class="programming-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M9 18V5l12-2v13"></path>
+                                <circle cx="6" cy="18" r="3"></circle>
+                                <circle cx="18" cy="16" r="3"></circle>
+                                <path d="M6 15V7l6-1"></path>
+                            </svg>
                         </div>
+                        <h3 class="programming-title">Symphonic Orchestras</h3>
+                        <p class="programming-desc">Grand symphonic performances from the Berlin Philharmonic, Vienna Philharmonic, and orchestras worldwide.</p>
                     </article>
-                    <article class="schedule-item">
-                        <time class="schedule-time">20:00</time>
-                        <div class="schedule-content">
-                            <h3 class="schedule-title">Evening Gala</h3>
-                            <p class="schedule-desc">Live broadcast from the Vienna Musikverein — New Year's Concert highlights.</p>
+                    <article class="programming-card">
+                        <div class="programming-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="8" r="5"></circle>
+                                <path d="M20 21a8 8 0 1 0-16 0"></path>
+                            </svg>
                         </div>
+                        <h3 class="programming-title">Solo Performances</h3>
+                        <p class="programming-desc">Virtuoso recitals showcasing pianists, violinists, cellists, and vocalists at the height of their artistry.</p>
                     </article>
-                </div>
-                <div class="schedule-cta">
-                    <a href="#" class="btn btn-outline">View Full Schedule</a>
+                    <article class="programming-card">
+                        <div class="programming-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                            </svg>
+                        </div>
+                        <h3 class="programming-title">Conservatory Performances</h3>
+                        <p class="programming-desc">Discover tomorrow's stars today with performances from the world's leading music conservatories.</p>
+                    </article>
+                    <article class="programming-card">
+                        <div class="programming-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="5" r="3"></circle>
+                                <path d="M12 8v4M8 20l4-8 4 8M6 16l6-4 6 4"></path>
+                            </svg>
+                        </div>
+                        <h3 class="programming-title">Ballet</h3>
+                        <p class="programming-desc">Breathtaking dance performances set to classical masterpieces from renowned ballet companies around the globe.</p>
+                    </article>
                 </div>
             </div>
         </section>
@@ -193,6 +251,122 @@
                             <h3 class="featured-title">In Conversation</h3>
                             <p class="featured-desc">Intimate interviews with leading classical musicians.</p>
                             <span class="featured-meta">Fridays at 20:00</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="team" id="team">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Our Team</h2>
+                    <p class="section-subtitle">Meet the passionate experts behind VIRTUOSO TV</p>
+                </div>
+                <div class="team-grid">
+                    <article class="team-card">
+                        <div class="team-image">
+                            <img src="images/team/victoria-unikel.jpg" alt="Victoria Unikel">
+                        </div>
+                        <div class="team-info">
+                            <h3 class="team-name">Victoria Unikel</h3>
+                            <p class="team-title">Co-Founder & President</p>
+                            <p class="team-bio">Award-winning artist, producer, and media entrepreneur. Founder of VUGA Media Group with global reach across 100+ digital publications.</p>
+                            <div class="team-social">
+                                <a href="https://www.instagram.com/vaborvictoria/" target="_blank" rel="noopener" aria-label="Instagram">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="team-card">
+                        <div class="team-image">
+                            <img src="images/team/gene-avakyan.jpg" alt="Gene Avakyan">
+                        </div>
+                        <div class="team-info">
+                            <h3 class="team-name">Gene Avakyan</h3>
+                            <p class="team-title">Co-Founder & CTO</p>
+                            <p class="team-bio">Serial entrepreneur with three decades of experience in aviation, entertainment, and technology. CEO of VUGA Enterprises and Edison Aerospace.</p>
+                            <div class="team-social">
+                                <a href="https://www.linkedin.com/in/avakyan/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="team-card">
+                        <div class="team-image">
+                            <img src="images/team/olga-thomas.jpg" alt="Olga Thomas">
+                        </div>
+                        <div class="team-info">
+                            <h3 class="team-name">Olga Thomas</h3>
+                            <p class="team-title">Co-Founder & Executive Producer</p>
+                            <p class="team-bio">World-renowned award-winning composer best known for her music for the British Royal Family, including tributes to Her Majesty The Queen.</p>
+                            <div class="team-social">
+                                <a href="https://www.instagram.com/drolgathomas/" target="_blank" rel="noopener" aria-label="Instagram">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="team-card">
+                        <div class="team-image">
+                            <img src="images/team/joanna-forest.jpg" alt="Joanna Forest">
+                        </div>
+                        <div class="team-info">
+                            <h3 class="team-name">Joanna Forest</h3>
+                            <p class="team-title">Director of Artist Relations</p>
+                            <p class="team-bio">Chart-topping classical crossover soprano. First independent artist to reach No.1 in the Official Classical Artists Album charts with a debut album.</p>
+                            <div class="team-social">
+                                <a href="https://www.instagram.com/joannaforest/" target="_blank" rel="noopener" aria-label="Instagram">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="team-card">
+                        <div class="team-image">
+                            <img src="images/team/philip-vaiman.jpg" alt="Philip Vaiman">
+                        </div>
+                        <div class="team-info">
+                            <h3 class="team-name">Philip Vaiman</h3>
+                            <p class="team-title">Music Director</p>
+                            <p class="team-bio">Internationally acclaimed violinist and Grammy Voting Member. Featured on soundtracks of award-winning motion pictures including Spider-Man 3.</p>
+                            <div class="team-social">
+                                <a href="https://www.instagram.com/philipvaiman/" target="_blank" rel="noopener" aria-label="Instagram">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="team-card">
+                        <div class="team-image">
+                            <img src="images/team/maria-schellenberg.jpg" alt="Maria Schellenberg">
+                        </div>
+                        <div class="team-info">
+                            <h3 class="team-name">Maria Schellenberg</h3>
+                            <p class="team-title">Director of Vocal Programming</p>
+                            <p class="team-bio">Distinguished mezzo-soprano known for bringing to life a diverse range of characters. Royal College of Music graduate with international credits.</p>
+                            <div class="team-social">
+                                <a href="https://www.instagram.com/mezzo_schmezzo/" target="_blank" rel="noopener" aria-label="Instagram">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="team-card">
+                        <div class="team-image">
+                            <img src="images/team/jannie-rawlinson.jpg" alt="Jannie Rawlinson">
+                        </div>
+                        <div class="team-info">
+                            <h3 class="team-name">Jannie Rawlinson</h3>
+                            <p class="team-title">Head of Broadcasting</p>
+                            <p class="team-bio">Veteran broadcaster and host of 'Classical Crossover' — the UK's only regular radio show devoted to the classical crossover genre, broadcast globally.</p>
+                            <div class="team-social">
+                                <a href="https://www.instagram.com/classicalxover4u/" target="_blank" rel="noopener" aria-label="Instagram">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                                </a>
+                            </div>
                         </div>
                     </article>
                 </div>
@@ -283,8 +457,7 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <a href="#" class="logo">
-                        <span class="logo-text">VIRTUOSO</span>
-                        <span class="logo-accent">TV</span>
+                        <img src="images/logo.png" alt="VIRTUOSO TV" height="18">
                     </a>
                     <p>Your premier destination for classical music television.</p>
                 </div>
@@ -292,7 +465,7 @@
                     <div class="footer-column">
                         <h4>Channel</h4>
                         <ul>
-                            <li><a href="#schedule">Schedule</a></li>
+                            <li><a href="#programming">Programming</a></li>
                             <li><a href="#featured">Featured</a></li>
                             <li><a href="#">On Demand</a></li>
                         </ul>
@@ -316,11 +489,11 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 VIRTUOSO TV. All rights reserved.</p>
+                <p>&copy; 2026 VIRTUOSO TV. All rights reserved. A part of <a href="https://vugagroup.com" target="_blank" rel="noopener">VUGA GROUP</a>.</p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=2"></script>
 </body>
 </html>
