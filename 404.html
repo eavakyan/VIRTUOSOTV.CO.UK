@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Page not found - VIRTUOSO TV">
+    <title>404 - Page Not Found | VIRTUOSO TV</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .error-page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .error-content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: calc(72px + var(--space-xl)) var(--container-padding) var(--space-3xl);
+        }
+        .error-inner {
+            max-width: 600px;
+        }
+        .error-code {
+            font-family: var(--font-heading);
+            font-size: clamp(6rem, 15vw, 10rem);
+            font-weight: 700;
+            line-height: 1;
+            color: var(--color-accent);
+            opacity: 0.3;
+            margin-bottom: var(--space-sm);
+        }
+        .error-title {
+            font-family: var(--font-heading);
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            font-weight: 600;
+            color: var(--color-text);
+            margin-bottom: var(--space-md);
+        }
+        .error-message {
+            color: var(--color-text-muted);
+            font-size: 1.125rem;
+            line-height: 1.7;
+            margin-bottom: var(--space-xl);
+        }
+        .error-actions {
+            display: flex;
+            gap: var(--space-sm);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .error-divider {
+            width: 60px;
+            height: 2px;
+            background: var(--color-accent);
+            margin: 0 auto var(--space-lg);
+        }
+    </style>
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="VIRTUOSO TV" height="24">
+            </a>
+            <nav class="nav" id="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html#home" class="nav-link">Home</a></li>
+                    <li><a href="index.html#about" class="nav-link">About</a></li>
+                    <li><a href="index.html#programming" class="nav-link">Programming</a></li>
+                    <li><a href="index.html#team" class="nav-link">Team</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="error-page">
+        <div class="error-content">
+            <div class="error-inner">
+                <div class="error-code">404</div>
+                <h1 class="error-title">The Performance Has Ended</h1>
+                <div class="error-divider"></div>
+                <p class="error-message">The page you're looking for seems to have taken its final bow. It may have been moved, renamed, or is no longer part of our repertoire.</p>
+                <div class="error-actions">
+                    <a href="index.html" class="btn btn-primary">Return Home</a>
+                    <a href="index.html#contact" class="btn btn-secondary">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <img src="images/logo.png" alt="VIRTUOSO TV" height="18">
+                    </a>
+                    <p>Your premier destination for classical music television.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Channel</h4>
+                        <ul>
+                            <li><a href="index.html#schedule">Schedule</a></li>
+                            <li><a href="index.html#featured">Featured</a></li>
+                            <li><a href="#">On Demand</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="index.html#about">About Us</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="index.html#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                            <li><a href="terms-of-service.html">Terms of Service</a></li>
+                            <li><a href="cookie-policy.html">Cookie Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 VIRTUOSO TV. All rights reserved. A part of <a href="https://vugagroup.com" target="_blank" rel="noopener">VUGA GROUP</a>.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
